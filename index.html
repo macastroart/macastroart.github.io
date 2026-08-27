@@ -1,332 +1,497 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.A. Castro Durán | Arte Andino Contemporáneo</title>
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #121212;
-            --text-muted: #6e6e6e;
-            --inca-gold: #b89243; /* Toque dorado Cusco */
-            --whatsapp-green: #25d366;
-            --card-bg: #f9f9f9;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            -webkit-font-smoothing: antialiased;
-        }
+    <title>Miguel Ángel Castro | Artista</title>
 
-        /* BARRA DE NAVEGACIÓN ESTILO ARIELLE KOMIE */
-        header.site-header {
-            background-color: var(--bg-color);
-            border-bottom: 1px solid #f2f2f2;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 20px 40px;
-        }
+    <meta
+        name="description"
+        content="Galería oficial de Miguel Ángel Castro. Pinturas originales y ediciones limitadas."
+    >
 
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-
-        /* Ajuste para pantallas grandes (PC) */
-        @media (min-width: 768px) {
-            .header-container {
-                flex-direction: row;
-                justify-content: space-between;
-                gap: 0;
-            }
-        }
-
-        .brand-logo {
-            font-size: 1.4rem;
-            font-weight: 300;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: var(--text-color);
-            transition: color 0.3s ease;
-        }
-
-        .brand-logo:hover {
-            color: var(--inca-gold);
-        }
-
-        .main-navigation {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 25px;
-        }
-
-        .main-navigation a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-size: 0.85rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            position: relative;
-            padding-bottom: 4px;
-            transition: color 0.3s ease;
-        }
-
-        /* Efecto de línea moderna al pasar el mouse por el menú */
-        .main-navigation a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--inca-gold);
-            transition: width 0.3s ease;
-        }
-
-        .main-navigation a:hover {
-            color: var(--inca-gold);
-        }
-
-        .main-navigation a:hover::after {
-            width: 100%;
-        }
-
-        /* CONTENEDOR DE CONTENIDO */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .hero-intro {
-            text-align: center;
-            padding: 50px 0 70px 0;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .hero-intro h1 {
-            font-size: 2.4rem;
-            font-weight: 300;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .hero-intro p {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-        }
-
-        /* GRILLA DE EXHIBICIÓN DE LIENZOS */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 60px;
-        }
-
-        @media (max-width: 500px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .hero-intro h1 {
-                font-size: 1.9rem;
-            }
-            header.site-header {
-                padding: 15px 20px;
-            }
-        }
-
-        .art-piece {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .art-image-wrapper {
-            background-color: var(--card-bg);
-            overflow: hidden;
-            position: relative;
-            margin-bottom: 22px;
-        }
-
-        .art-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
-        .art-piece:hover .art-image {
-            transform: scale(1.025);
-        }
-
-        .art-details {
-            text-align: left;
-        }
-
-        .art-title {
-            font-size: 1.35rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin: 0 0 10px 0;
-        }
-
-        .art-meta {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 14px;
-            letter-spacing: 0.5px;
-        }
-
-        .art-price {
-            font-size: 1.3rem;
-            font-weight: 500;
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
-        }
-
-        /* BOTONES DE COMPRA DOBLE CON MEJOR ACABADO */
-        .purchase-actions {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .btn-action {
-            display: block;
-            text-align: center;
-            padding: 15px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-radius: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-checkout {
-            background-color: var(--text-color);
-            color: #ffffff;
-            border: 1px solid var(--text-color);
-        }
-
-        .btn-checkout:hover {
-            background-color: transparent;
-            color: var(--text-color);
-        }
-
-        .btn-whatsapp {
-            background-color: transparent;
-            color: var(--text-muted);
-            border: 1px solid #dcdcdc;
-        }
-
-        .btn-whatsapp:hover {
-            color: var(--whatsapp-green);
-            border-color: var(--whatsapp-green);
-            background-color: #fafdfb;
-        }
-
-        /* SECCIÓN BIOGRÁFICA */
-        .about-section {
-            margin-top: 120px;
-            padding: 90px 20px;
-            background-color: var(--card-bg);
-            text-align: center;
-        }
-
-        .about-content {
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        .about-content h2 {
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-weight: 300;
-            margin-bottom: 25px;
-            font-size: 1.6rem;
-        }
-
-        /* PIE DE PÁGINA CORPORATIVO */
-        footer {
-            margin-top: 60px;
-            padding: 60px 20px;
-            border-top: 1px solid #f2f2f2;
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            line-height: 1.7;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- MENÚ MINIMALISTA IDÉNTICO AL DE REFERENCIA -->
+    <!-- =========================
+         HEADER
+    ========================== -->
+
     <header class="site-header">
-        <div class="header-container">
-            <a href="#" class="brand-logo">M.A. Castro Durán</a>
-            <ul class="main-navigation">
-                <li><a href="#originales">Originales</a></li>
-                <li><a href="#sobre-mi">El Artista</a></li>
-                <li><a href="https://wa.me" target="_blank">Contacto</a></li>
-            </ul>
-        </div>
+
+        <a href="index.html" class="brand">
+            MIGUEL ÁNGEL CASTRO
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="#obras">OBRAS</a>
+
+            <a href="#ediciones">EDICIONES</a>
+
+            <a href="#artista">SOBRE MÍ</a>
+
+            <a href="#proceso">PROCESO</a>
+
+            <a href="#contacto">CONTACTO</a>
+
+        </nav>
+
+        <a href="#" class="cart">
+            🛒
+        </a>
+
+        <button class="menu-button" aria-label="Abrir menú">
+            ☰
+        </button>
+
     </header>
 
-    <div class="container">
-        <!-- Presentación de la Galería -->
-        <section class="hero-intro">
-            <h1>Obras de Arte Originales</h1>
-            <p>Pinturas hechas a mano en acrílico sobre lienzo. Una inmersión profunda en la riqueza ancestral de Cusco, sus danzas tradicionales de vibrantes colores y la mística de la cultura Inca contemporánea.</p>
+
+    <main>
+
+
+        <!-- =========================
+             HERO / PORTADA
+        ========================== -->
+
+        <section class="hero">
+
+            <img
+                src="images/hero-condor.jpg"
+                alt="El sueño del cóndor — Miguel Ángel Castro"
+                class="hero-image"
+            >
+
+            <div class="hero-overlay">
+
+                <p class="hero-label">
+                    OBRA ORIGINAL
+                </p>
+
+                <h1>
+                    EL SUEÑO<br>
+                    DEL CÓNDOR
+                </h1>
+
+                <p class="hero-text">
+                    Una obra sobre identidad, memoria y libertad.
+                </p>
+
+                <a
+                    href="obra-el-sueno-del-condor.html"
+                    class="button button-light"
+                >
+                    DESCUBRIR LA OBRA
+                </a>
+
+            </div>
+
         </section>
 
-        <!-- Galería de Arte -->
-        <main class="gallery-grid" id="originales">
-            
-            <!-- CUADRO 1 -->
-            <article class="art-piece">
-                <div class="art-image-wrapper">
-                    <img src="https://unsplash.com" alt="Pintura Danza Cusco" class="art-image">
-                </div>
-                <div class="art-details">
-                    <h2 class="art-title">Tradición Inmortal - Danza de Cusco</h2>
-                    <div class="art-meta">Acrílico sobre lienzo • 100 x 120 cm • Obra Única</div>
-                    <div class="art-price">S/. 1,800 PEN / $480 USD</div>
-                    
-                    <div class="purchase-actions">
-                        <a href="#" class="btn-action btn-checkout">Comprar</a>
-                        <!-- REEMPLAZA EL 51999999999 CON TU WHATSAPP REAL -->
-                        <a href="https://wa.me?text=Hola%20Miguel%20Ángel,%20me%20interesa%20adquirir%20la%20obra%20Tradición%20Inmortal" target="_blank" class="btn-action btn-whatsapp">WhatsApp</a>
-                    </div>
-                </div>
-            </article>
 
-            <!-- CUADRO 2 -->
-            <article class="art-piece">
-                <div class="art-image-wrapper">
-                    <img src="https://unsplash.com" alt="Pintura Cultura Inca" class="art-image">
+        <!-- =========================
+             OBRAS
+        ========================== -->
+
+        <section id="obras" class="section">
+
+            <div class="section-header">
+
+                <p class="section-label">
+                    COLECCIÓN
+                </p>
+
+                <h2>
+                    Obras
+                </h2>
+
+            </div>
+
+
+            <div class="art-grid">
+
+
+                <!-- OBRA 1 -->
+
+                <article class="art-card">
+
+                    <a href="obra-el-sueno-del-condor.html">
+
+                        <img
+                            src="images/hero-condor.jpg"
+                            alt="El sueño del cóndor"
+                        >
+
+                    </a>
+
+                    <div class="art-info">
+
+                        <h3>
+                            El sueño del cóndor
+                        </h3>
+
+                        <p>
+                            Acrílico sobre lienzo
+                        </p>
+
+                        <span>
+                            ORIGINAL DISPONIBLE
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OBRA 2 -->
+
+                <article class="art-card">
+
+                    <a href="#">
+
+                        <img
+                            src="images/obra-02.jpg"
+                            alt="Obra de Miguel Ángel Castro"
+                        >
+
+                    </a>
+
+                    <div class="art-info">
+
+                        <h3>
+                            Próxima obra
+                        </h3>
+
+                        <p>
+                            Obra original
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OBRA 3 -->
+
+                <article class="art-card">
+
+                    <a href="#">
+
+                        <img
+                            src="images/obra-03.jpg"
+                            alt="Obra de Miguel Ángel Castro"
+                        >
+
+                    </a>
+
+                    <div class="art-info">
+
+                        <h3>
+                            Próxima obra
+                        </h3>
+
+                        <p>
+                            Obra original
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="section-button">
+
+                <a href="#" class="button button-dark">
+                    VER TODAS LAS OBRAS
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OBRA DESTACADA
+        ========================== -->
+
+        <section class="featured-work">
+
+            <div class="featured-image">
+
+                <img
+                    src="images/condor-detail.jpg"
+                    alt="Detalle de El sueño del cóndor"
+                >
+
+            </div>
+
+
+            <div class="featured-content">
+
+                <p class="section-label">
+                    OBRA DESTACADA
+                </p>
+
+                <h2>
+                    El sueño del cóndor
+                </h2>
+
+                <p>
+                    Una pintura nacida de la relación entre la figura
+                    andina, la memoria y el simbolismo del cóndor.
+                </p>
+
+                <p>
+                    Acrílico sobre lienzo<br>
+                    100 × 125 cm
+                </p>
+
+                <a
+                    href="obra-el-sueno-del-condor.html"
+                    class="button button-dark"
+                >
+                    VER OBRA
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDICIONES
+        ========================== -->
+
+        <section id="ediciones" class="section editions">
+
+            <div class="section-header">
+
+                <p class="section-label">
+                    COLECCIONES LIMITADAS
+                </p>
+
+                <h2>
+                    Ediciones
+                </h2>
+
+                <p>
+                    Reproducciones Fine Art de obras seleccionadas,
+                    producidas en ediciones limitadas.
+                </p>
+
+            </div>
+
+
+            <div class="edition-preview">
+
+                <div>
+
+                    <img
+                        src="images/hero-condor.jpg"
+                        alt="Edición Fine Art"
+                    >
+
                 </div>
-                <div class="art-details">
-                    <h2 class="art-title">Energía Incaica Contemporánea</h2>
-                    <div class="art-meta">Acrílico sobre lienzo • 80 x 80 cm • Obra Única</div>
-                    <div class="art-price">S/. 1,300 PEN / $350 USD</div>
-                    
+
+                <div class="edition-text">
+
+                    <h3>
+                        Una obra para conservar
+                    </h3>
+
+                    <p>
+                        Próximamente podrás adquirir reproducciones
+                        Fine Art de algunas de mis obras, acompañadas
+                        de certificado de autenticidad.
+                    </p>
+
+                    <a href="#" class="button button-dark">
+                        EXPLORAR EDICIONES
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE EL ARTISTA
+        ========================== -->
+
+        <section id="artista" class="artist-section">
+
+            <div class="artist-image">
+
+                <img
+                    src="images/artista.jpg"
+                    alt="Miguel Ángel Castro"
+                >
+
+            </div>
+
+
+            <div class="artist-content">
+
+                <p class="section-label">
+                    EL ARTISTA
+                </p>
+
+                <h2>
+                    Miguel Ángel Castro
+                </h2>
+
+                <p>
+                    Mi pintura nace del encuentro entre la realidad,
+                    la memoria y la imaginación.
+                </p>
+
+                <p>
+                    Exploro la identidad y el universo andino mediante
+                    una combinación de elementos figurativos,
+                    expresivos y abstractos.
+                </p>
+
+                <a href="#" class="button button-dark">
+                    CONOCER MÁS
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROCESO
+        ========================== -->
+
+        <section id="proceso" class="process-section">
+
+            <div class="process-content">
+
+                <p class="section-label">
+                    DETRÁS DE LA OBRA
+                </p>
+
+                <h2>
+                    El proceso
+                </h2>
+
+                <p>
+                    Descubre fragmentos del proceso creativo,
+                    desde las primeras ideas hasta la obra terminada.
+                </p>
+
+                <a href="#" class="button button-light">
+                    VER EL PROCESO
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACTO
+        ========================== -->
+
+        <section id="contacto" class="contact-section">
+
+            <p class="section-label">
+                CONTACTO
+            </p>
+
+            <h2>
+                ¿Quieres adquirir una obra?
+            </h2>
+
+            <p>
+                Escríbeme para consultar disponibilidad,
+                adquisiciones o información sobre mis obras.
+            </p>
+
+            <div class="contact-buttons">
+
+                <a href="#" class="button button-dark">
+                    WHATSAPP
+                </a>
+
+                <a href="mailto:" class="button button-outline">
+                    CORREO
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+
+            <strong>
+                MIGUEL ÁNGEL CASTRO
+            </strong>
+
+            <p>
+                Artista
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#obras">
+                Obras
+            </a>
+
+            <a href="#ediciones">
+                Ediciones
+            </a>
+
+            <a href="#artista">
+                Sobre mí
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Miguel Ángel Castro
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
