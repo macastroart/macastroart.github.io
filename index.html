@@ -2,670 +2,735 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Miguel Ángel Castro | Arte Original</title>
 
-    <meta name="description" content="Miguel Ángel Castro — Artista plástico. Obras originales, pintura contemporánea y arte inspirado en la identidad andina.">
+    <meta name="description" content="Miguel Ángel Castro — Artista plástico. Obras originales inspiradas en la memoria, identidad y universo andino.">
     <meta name="author" content="Miguel Ángel Castro">
 
+    <!-- TIPOGRAFÍAS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <style>
-
-        /* ================================
-           CONFIGURACIÓN GENERAL
-        ================================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: #11110f;
-            color: #eeeae2;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            display: block;
-            width: 100%;
-        }
-
-        .container {
-            width: min(1200px, 90%);
-            margin: auto;
-        }
-
-        /* ================================
-           HEADER
-        ================================= */
-
-        header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 20;
-            padding: 28px 0;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 30px;
-            letter-spacing: 3px;
-            font-weight: 500;
-        }
-
-        .logo span {
-            display: block;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px;
-            letter-spacing: 4px;
-            margin-top: -3px;
-            opacity: .6;
-        }
-
-        nav {
-            display: flex;
-            gap: 35px;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        nav a {
-            opacity: .75;
-            transition: .3s;
-        }
-
-        nav a:hover {
-            opacity: 1;
-        }
-
-        /* ================================
-           HERO
-        ================================= */
-
-        .hero {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background:
-                linear-gradient(90deg, rgba(10,10,9,.96) 0%, rgba(10,10,9,.65) 45%, rgba(10,10,9,.15) 100%),
-                url('https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1800&q=90')
-                center/cover;
-        }
-
-        .hero-content {
-            width: min(1200px, 90%);
-            margin: auto;
-            padding-top: 60px;
-        }
-
-        .eyebrow {
-            font-size: 10px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            opacity: .6;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(65px, 9vw, 125px);
-            font-weight: 300;
-            line-height: .82;
-            max-width: 800px;
-        }
-
-        .hero h1 em {
-            font-style: italic;
-            color: #c9b48a;
-        }
-
-        .hero-description {
-            max-width: 500px;
-            margin-top: 35px;
-            line-height: 1.8;
-            font-size: 14px;
-            color: #c9c5bd;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 28px;
-            border: 1px solid rgba(255,255,255,.35);
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: .3s;
-        }
-
-        .btn:hover {
-            background: #eeeae2;
-            color: #11110f;
-        }
-
-        .btn-gold {
-            background: #c9b48a;
-            border-color: #c9b48a;
-            color: #11110f;
-        }
-
-        .btn-gold:hover {
-            background: #eeeae2;
-            border-color: #eeeae2;
-        }
-
-        /* ================================
-           SECCIONES
-        ================================= */
-
-        section {
-            padding: 120px 0;
-        }
-
-        .section-label {
-            font-size: 9px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #a99a78;
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(45px, 6vw, 75px);
-            font-weight: 400;
-            line-height: .95;
-        }
-
-        /* ================================
-           OBRA DESTACADA
-        ================================= */
-
-        .featured {
-            background: #171714;
-        }
-
-        .featured-grid {
-            display: grid;
-            grid-template-columns: 1.1fr .9fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .featured-image {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .featured-image img {
-            aspect-ratio: 4 / 5;
-            object-fit: cover;
-            transition: transform 1s ease;
-        }
-
-        .featured-image:hover img {
-            transform: scale(1.03);
-        }
-
-        .featured-info {
-            padding-right: 30px;
-        }
-
-        .featured-info h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(50px, 6vw, 80px);
-            font-weight: 400;
-            line-height: .9;
-            margin-bottom: 25px;
-        }
-
-        .featured-info h2 em {
-            color: #c9b48a;
-        }
-
-        .details {
-            border-top: 1px solid #36352f;
-            border-bottom: 1px solid #36352f;
-            padding: 22px 0;
-            margin: 30px 0;
-        }
-
-        .detail-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 7px 0;
-            font-size: 12px;
-        }
-
-        .detail-row span:first-child {
-            opacity: .5;
-        }
-
-        .price {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 40px;
-            margin-bottom: 25px;
-        }
-
-        .availability {
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #b9a67d;
-            margin-bottom: 25px;
-        }
-
-        /* ================================
-           GALERÍA
-        ================================= */
-
-        .gallery {
-            background: #11110f;
-        }
-
-        .gallery-heading {
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-            margin-bottom: 60px;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .art-card {
-            cursor: pointer;
-        }
-
-        .art-image {
-            overflow: hidden;
-            background: #222;
-        }
-
-        .art-image img {
-            aspect-ratio: 4 / 5;
-            object-fit: cover;
-            transition: transform .8s ease;
-        }
-
-        .art-card:hover .art-image img {
-            transform: scale(1.05);
-        }
-
-        .art-info {
-            padding: 20px 0;
-        }
-
-        .art-info h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 28px;
-            font-weight: 400;
-        }
-
-        .art-info p {
-            font-size: 10px;
-            letter-spacing: 1px;
-            opacity: .5;
-            margin-top: 5px;
-        }
-
-        /* ================================
-           FILOSOFÍA
-        ================================= */
-
-        .statement {
-            background: #ded8cc;
-            color: #171714;
-            text-align: center;
-        }
-
-        .statement-inner {
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .statement blockquote {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(40px, 5vw, 68px);
-            line-height: 1.05;
-            font-weight: 400;
-        }
-
-        .statement blockquote em {
-            color: #756442;
-        }
-
-        .statement p {
-            max-width: 600px;
-            margin: 35px auto 0;
-            font-size: 13px;
-            line-height: 1.9;
-            opacity: .7;
-        }
-
-        /* ================================
-           SOBRE EL ARTISTA
-        ================================= */
-
-        .about {
-            background: #171714;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: .8fr 1.2fr;
-            gap: 100px;
-            align-items: center;
-        }
-
-        .about-image img {
-            aspect-ratio: 4 / 5;
-            object-fit: cover;
-            filter: grayscale(20%);
-        }
-
-        .about-text h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(50px, 6vw, 80px);
-            font-weight: 400;
-            line-height: .9;
-            margin-bottom: 30px;
-        }
-
-        .about-text p {
-            font-size: 14px;
-            line-height: 2;
-            color: #bbb7af;
-            margin-bottom: 20px;
-        }
-
-        /* ================================
-           CERTIFICADO
-        ================================= */
-
-        .certificate {
-            background: #11110f;
-        }
-
-        .certificate-box {
-            border: 1px solid #34332e;
-            padding: 70px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .certificate-box h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 55px;
-            font-weight: 400;
-            line-height: .95;
-        }
-
-        .certificate-box p {
-            font-size: 13px;
-            line-height: 1.9;
-            color: #aaa69e;
-        }
-
-        /* ================================
-           CONTACTO
-        ================================= */
-
-        .contact {
-            background: #c9b48a;
-            color: #151411;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(55px, 8vw, 100px);
-            font-weight: 400;
-            line-height: .85;
-        }
-
-        .contact p {
-            max-width: 500px;
-            margin: 30px auto;
-            font-size: 13px;
-            line-height: 1.8;
-            opacity: .75;
-        }
-
-        .contact .btn {
-            border-color: #151411;
-            color: #151411;
-        }
-
-        .contact .btn:hover {
-            background: #151411;
-            color: #c9b48a;
-        }
-
-        /* ================================
-           FOOTER
-        ================================= */
-
-        footer {
-            background: #0b0b0a;
-            padding: 35px 0;
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        footer p {
-            font-size: 9px;
-            letter-spacing: 2px;
-            opacity: .4;
-            text-transform: uppercase;
-        }
-
-        .social {
-            display: flex;
-            gap: 25px;
-            font-size: 10px;
-            letter-spacing: 1px;
-        }
-
-        /* ================================
-           WHATSAPP
-        ================================= */
-
-        .whatsapp {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background: #25D366;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 25px;
-            z-index: 100;
-            box-shadow: 0 5px 25px rgba(0,0,0,.35);
-            transition: .3s;
-        }
-
-        .whatsapp:hover {
-            transform: scale(1.08);
-        }
-
-        /* ================================
-           RESPONSIVE
-        ================================= */
-
-        @media (max-width: 850px) {
-
-            nav {
-                display: none;
-            }
-
-            .hero {
-                background:
-                    linear-gradient(90deg, rgba(10,10,9,.88), rgba(10,10,9,.5)),
-                    url('https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=85')
-                    center/cover;
-            }
-
-            .featured-grid,
-            .about-grid,
-            .certificate-box {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .featured-info {
-                padding-right: 0;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .certificate-box {
-                padding: 40px;
-            }
-
-            .gallery-heading {
-                display: block;
-            }
-
-            .gallery-heading .section-title {
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (max-width: 550px) {
-
-            section {
-                padding: 80px 0;
-            }
-
-            .logo {
-                font-size: 25px;
-            }
-
-            .hero h1 {
-                font-size: 65px;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-description {
-                font-size: 13px;
-            }
-
-            .certificate-box {
-                padding: 30px 25px;
-            }
-
-            .footer-inner {
-                display: block;
-            }
-
-            .social {
-                margin-top: 20px;
-            }
-        }
-
-    </style>
+
+<style>
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f4ed;
+    color: #292720;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    padding: 30px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.logo span {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    letter-spacing: 4px;
+    margin-top: 2px;
+    opacity: .55;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav a {
+    opacity: .65;
+    transition: .3s;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(247,244,237,.96) 0%,
+            rgba(247,244,237,.88) 48%,
+            rgba(247,244,237,.20) 100%
+        ),
+        url('https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1800&q=90')
+        center/cover;
+}
+
+.hero-content {
+    width: min(1180px, 90%);
+    margin: auto;
+    padding-top: 70px;
+}
+
+.eyebrow {
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #81745b;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(65px, 9vw, 125px);
+    font-weight: 400;
+    line-height: .82;
+    max-width: 850px;
+}
+
+.hero h1 em {
+    font-style: italic;
+    color: #8b7550;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin-top: 35px;
+    line-height: 1.9;
+    font-size: 13px;
+    color: #625e55;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    border: 1px solid #7b725f;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #292720;
+    color: white;
+}
+
+.btn-gold {
+    background: #a58c5e;
+    color: white;
+    border-color: #a58c5e;
+}
+
+.btn-gold:hover {
+    background: #292720;
+    border-color: #292720;
+}
+
+
+/* =========================================================
+   OBRA DESTACADA
+   MARFIL
+========================================================= */
+
+.featured {
+    background: #eee9dd;
+    padding: 125px 0;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 85px;
+    align-items: center;
+}
+
+.featured-image {
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(60,50,35,.12);
+}
+
+.featured-image img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.featured-image:hover img {
+    transform: scale(1.025);
+}
+
+.section-label {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #927b55;
+    margin-bottom: 20px;
+}
+
+.featured-info h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 6vw, 82px);
+    font-weight: 400;
+    line-height: .88;
+    margin-bottom: 30px;
+}
+
+.featured-info h2 em {
+    color: #8b7550;
+}
+
+.featured-info > p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #625e55;
+}
+
+.details {
+    border-top: 1px solid #d2cabb;
+    border-bottom: 1px solid #d2cabb;
+    padding: 20px 0;
+    margin: 30px 0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    font-size: 11px;
+}
+
+.detail-row span:first-child {
+    color: #898274;
+}
+
+.price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.availability {
+    font-size: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #81704e;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   GALERÍA
+   BLANCO
+========================================================= */
+
+.gallery {
+    background: #ffffff;
+    padding: 125px 0;
+}
+
+.gallery-heading {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 75px);
+    font-weight: 400;
+    line-height: .95;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.art-card {
+    cursor: pointer;
+}
+
+.art-image {
+    overflow: hidden;
+    background: #e8e4da;
+}
+
+.art-image img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.art-card:hover .art-image img {
+    transform: scale(1.04);
+}
+
+.art-info {
+    padding: 18px 0 25px;
+}
+
+.art-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.art-info p {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #8a857c;
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   MANIFIESTO
+   AZUL GRISÁCEO
+========================================================= */
+
+.statement {
+    background: #dce1df;
+    color: #2d3534;
+    padding: 130px 0;
+    text-align: center;
+}
+
+.statement-inner {
+    max-width: 900px;
+    margin: auto;
+}
+
+.statement blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: 1.04;
+    font-weight: 400;
+}
+
+.statement blockquote em {
+    font-style: italic;
+    color: #536d6a;
+}
+
+.statement p {
+    max-width: 620px;
+    margin: 35px auto 0;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #56615f;
+}
+
+
+/* =========================================================
+   SOBRE EL ARTISTA
+   ARENA CLARA
+========================================================= */
+
+.about {
+    background: #f0e9dc;
+    padding: 125px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(60,50,35,.12);
+}
+
+.about-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 6vw, 82px);
+    font-weight: 400;
+    line-height: .88;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    font-size: 13px;
+    line-height: 2;
+    color: #655f55;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CERTIFICADO
+   TERRACOTA MUY SUAVE
+========================================================= */
+
+.certificate {
+    background: #e8d9d0;
+    padding: 120px 0;
+}
+
+.certificate-box {
+    border: 1px solid #cbb9ae;
+    padding: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.certificate-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: .95;
+}
+
+.certificate-box p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #655c57;
+}
+
+
+/* =========================================================
+   CONTACTO
+   OCRE CLARO
+========================================================= */
+
+.contact {
+    background: #d5c29c;
+    color: #28251e;
+    padding: 130px 0;
+    text-align: center;
+}
+
+.contact .section-label {
+    color: #675b42;
+}
+
+.contact h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(58px, 8vw, 100px);
+    font-weight: 400;
+    line-height: .84;
+}
+
+.contact p {
+    max-width: 520px;
+    margin: 30px auto;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #554d3c;
+}
+
+.contact .btn {
+    border-color: #3e392e;
+}
+
+.contact .btn:hover {
+    background: #292720;
+    color: #d5c29c;
+}
+
+
+/* =========================================================
+   FOOTER
+   BLANCO ROTO
+========================================================= */
+
+footer {
+    background: #f7f4ed;
+    padding: 35px 0;
+    border-top: 1px solid #e4dfd4;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #8b877e;
+    text-transform: uppercase;
+}
+
+.social {
+    display: flex;
+    gap: 25px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #777269;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+
+    background: #5d8c69;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 23px;
+
+    z-index: 100;
+
+    box-shadow: 0 5px 25px rgba(40,50,40,.18);
+
+    transition: .3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(247,244,237,.94),
+                rgba(247,244,237,.65)
+            ),
+            url('https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=85')
+            center/cover;
+    }
+
+    .featured-grid,
+    .about-grid,
+    .certificate-box {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .certificate-box {
+        padding: 45px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    section,
+    .featured,
+    .gallery,
+    .about,
+    .certificate,
+    .contact,
+    .statement {
+        padding: 80px 0;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-box {
+        padding: 30px 25px;
+    }
+
+    .footer-inner {
+        display: block;
+    }
+
+    .social {
+        margin-top: 20px;
+    }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-<!-- ================================
-     HEADER
-================================= -->
+
+<!-- =====================================================
+     CABECERA
+====================================================== -->
 
 <header>
+
     <div class="container nav">
 
         <a href="#" class="logo">
+
             MIGUEL ÁNGEL CASTRO
-            <span>ARTISTA PLÁSTICO</span>
+
+            <span>
+                ARTISTA PLÁSTICO
+            </span>
+
         </a>
 
         <nav>
-            <a href="#obra">Obra destacada</a>
-            <a href="#galeria">Galería</a>
-            <a href="#artista">Artista</a>
-            <a href="#contacto">Contacto</a>
+
+            <a href="#obra">
+                Obra destacada
+            </a>
+
+            <a href="#galeria">
+                Galería
+            </a>
+
+            <a href="#artista">
+                Artista
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
-<!-- ================================
-     HERO
-================================= -->
+<!-- =====================================================
+     PORTADA
+====================================================== -->
 
 <section class="hero">
 
     <div class="hero-content">
 
         <div class="eyebrow">
-            Arte original · Cusco · Perú
+            Arte original · Perú
         </div>
 
         <h1>
+
             El arte<br>
+
             <em>que permanece.</em>
+
         </h1>
 
         <p class="hero-description">
+
             Obras originales donde la realidad y la abstracción
             se encuentran para explorar la memoria, la identidad
             y la fuerza de los Andes.
+
         </p>
 
         <div class="hero-buttons">
@@ -685,20 +750,22 @@
 </section>
 
 
-<!-- ================================
+<!-- =====================================================
      OBRA DESTACADA
-================================= -->
+====================================================== -->
 
 <section class="featured" id="obra">
 
     <div class="container featured-grid">
 
+
         <div class="featured-image">
 
             <!-- FOTO PROVISIONAL -->
+
             <img
                 src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a5?auto=format&fit=crop&w=1000&q=90"
-                alt="El sueño del cóndor - Miguel Ángel Castro"
+                alt="El sueño del cóndor"
             >
 
         </div>
@@ -711,16 +778,23 @@
             </div>
 
             <h2>
+
                 El sueño<br>
+
                 <em>del cóndor</em>
+
             </h2>
 
             <p>
-                Una obra inspirada en la fuerza simbólica del cóndor
-                y su vínculo con el mundo andino. Una mirada hacia
-                aquello que permanece en la memoria y hacia aquello
-                que todavía está por despertar.
+
+                Una obra inspirada en la fuerza simbólica
+                del cóndor y su vínculo con el mundo andino.
+                Una mirada hacia aquello que permanece en la
+                memoria y hacia aquello que todavía está
+                por despertar.
+
             </p>
+
 
             <div class="details">
 
@@ -746,6 +820,7 @@
 
             </div>
 
+
             <div class="availability">
                 ● Disponible
             </div>
@@ -753,6 +828,7 @@
             <div class="price">
                 S/ 3,000
             </div>
+
 
             <a
                 class="btn btn-gold"
@@ -769,9 +845,9 @@
 </section>
 
 
-<!-- ================================
+<!-- =====================================================
      GALERÍA
-================================= -->
+====================================================== -->
 
 <section class="gallery" id="galeria">
 
@@ -779,24 +855,19 @@
 
         <div class="gallery-heading">
 
-            <div>
-
-                <div class="section-label">
-                    Colección
-                </div>
-
-                <h2 class="section-title">
-                    Obras seleccionadas
-                </h2>
-
+            <div class="section-label">
+                Colección
             </div>
+
+            <h2 class="section-title">
+                Obras seleccionadas
+            </h2>
 
         </div>
 
 
         <div class="gallery-grid">
 
-            <!-- OBRA 01 -->
 
             <article class="art-card">
 
@@ -804,14 +875,16 @@
 
                     <img
                         src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=900&q=85"
-                        alt="Obra de arte"
+                        alt="Tejiendo la memoria"
                     >
 
                 </div>
 
                 <div class="art-info">
 
-                    <h3>Tejiendo la memoria</h3>
+                    <h3>
+                        Tejiendo la memoria
+                    </h3>
 
                     <p>
                         OBRA ORIGINAL · VENDIDA
@@ -822,22 +895,22 @@
             </article>
 
 
-            <!-- OBRA 02 -->
-
             <article class="art-card">
 
                 <div class="art-image">
 
                     <img
                         src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=900&q=85"
-                        alt="Obra de arte contemporáneo"
+                        alt="El sueño del cóndor"
                     >
 
                 </div>
 
                 <div class="art-info">
 
-                    <h3>El sueño del cóndor</h3>
+                    <h3>
+                        El sueño del cóndor
+                    </h3>
 
                     <p>
                         ACRÍLICO SOBRE LIENZO · 100 × 125 CM
@@ -848,22 +921,22 @@
             </article>
 
 
-            <!-- OBRA 03 -->
-
             <article class="art-card">
 
                 <div class="art-image">
 
                     <img
                         src="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=900&q=85"
-                        alt="Pintura contemporánea"
+                        alt="Memoria de los Andes"
                     >
 
                 </div>
 
                 <div class="art-info">
 
-                    <h3>Memoria de los Andes</h3>
+                    <h3>
+                        Memoria de los Andes
+                    </h3>
 
                     <p>
                         COLECCIÓN · PRÓXIMAMENTE
@@ -873,8 +946,6 @@
 
             </article>
 
-
-            <!-- OBRA 04 -->
 
             <article class="art-card">
 
@@ -882,14 +953,16 @@
 
                     <img
                         src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?auto=format&fit=crop&w=900&q=85"
-                        alt="Pintura artística"
+                        alt="Guardianes"
                     >
 
                 </div>
 
                 <div class="art-info">
 
-                    <h3>Guardianes</h3>
+                    <h3>
+                        Guardianes
+                    </h3>
 
                     <p>
                         COLECCIÓN · PRÓXIMAMENTE
@@ -899,8 +972,6 @@
 
             </article>
 
-
-            <!-- OBRA 05 -->
 
             <article class="art-card">
 
@@ -908,14 +979,16 @@
 
                     <img
                         src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a5?auto=format&fit=crop&w=900&q=85"
-                        alt="Pintura abstracta"
+                        alt="La llamada"
                     >
 
                 </div>
 
                 <div class="art-info">
 
-                    <h3>La llamada</h3>
+                    <h3>
+                        La llamada
+                    </h3>
 
                     <p>
                         COLECCIÓN · PRÓXIMAMENTE
@@ -925,8 +998,6 @@
 
             </article>
 
-
-            <!-- OBRA 06 -->
 
             <article class="art-card">
 
@@ -934,14 +1005,16 @@
 
                     <img
                         src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=900&q=85"
-                        alt="Arte contemporáneo"
+                        alt="Origen"
                     >
 
                 </div>
 
                 <div class="art-info">
 
-                    <h3>Origen</h3>
+                    <h3>
+                        Origen
+                    </h3>
 
                     <p>
                         COLECCIÓN · PRÓXIMAMENTE
@@ -950,6 +1023,7 @@
                 </div>
 
             </article>
+
 
         </div>
 
@@ -958,9 +1032,9 @@
 </section>
 
 
-<!-- ================================
+<!-- =====================================================
      MANIFIESTO
-================================= -->
+====================================================== -->
 
 <section class="statement">
 
@@ -971,16 +1045,20 @@
         </div>
 
         <blockquote>
+
             “No pinto solamente lo que veo.
             <em>Pinto aquello que permanece</em>
             cuando lo visible desaparece.”
+
         </blockquote>
 
         <p>
+
             Mi pintura nace del encuentro entre la figuración
             y la abstracción. Busco que cada obra conserve algo
             reconocible y, al mismo tiempo, permita al espectador
             completar aquello que no está dicho.
+
         </p>
 
     </div>
@@ -988,21 +1066,22 @@
 </section>
 
 
-<!-- ================================
-     SOBRE EL ARTISTA
-================================= -->
+<!-- =====================================================
+     ARTISTA
+====================================================== -->
 
 <section class="about" id="artista">
 
     <div class="container about-grid">
 
+
         <div class="about-image">
 
-            <!-- FOTO PROVISIONAL DEL ARTISTA -->
+            <!-- FOTO PROVISIONAL -->
 
             <img
-                src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a5?auto=format&fit=crop&w=900&q=85"
-                alt="Miguel Ángel Castro - Artista plástico"
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=85"
+                alt="Artista"
             >
 
         </div>
@@ -1015,26 +1094,33 @@
             </div>
 
             <h2>
+
                 Miguel Ángel<br>
                 Castro
+
             </h2>
 
             <p>
-                Artista plástico peruano cuya obra explora la
-                memoria, la identidad y el imaginario de los Andes
-                a través de una combinación de realismo,
-                abstracción y una pincelada expresiva.
+
+                Artista plástico peruano cuya obra explora
+                la memoria, la identidad y el imaginario
+                de los Andes a través de una combinación
+                de realismo, abstracción y una pincelada
+                expresiva.
+
             </p>
 
             <p>
+
                 Cada pintura busca construir una experiencia:
                 no solamente representar una escena, sino
-                crear una atmósfera capaz de permanecer en la
-                memoria de quien la contempla.
+                crear una atmósfera capaz de permanecer en
+                la memoria de quien la contempla.
+
             </p>
 
             <a href="#contacto" class="btn">
-                Conocer más
+                Contactar
             </a>
 
         </div>
@@ -1044,15 +1130,16 @@
 </section>
 
 
-<!-- ================================
+<!-- =====================================================
      CERTIFICADO
-================================= -->
+====================================================== -->
 
 <section class="certificate">
 
     <div class="container">
 
         <div class="certificate-box">
+
 
             <div>
 
@@ -1061,9 +1148,11 @@
                 </div>
 
                 <h2>
+
                     Una obra original
                     merece una historia
                     que la acompañe.
+
                 </h2>
 
             </div>
@@ -1072,21 +1161,26 @@
             <div>
 
                 <p>
-                    Cada obra original adquirida incluye su
-                    Certificado de Autenticidad, con la información
-                    correspondiente a la pieza, técnica, dimensiones
-                    y autoría.
+
+                    Cada obra original adquirida incluye
+                    su Certificado de Autenticidad, con la
+                    información correspondiente a la pieza,
+                    técnica, dimensiones y autoría.
+
                 </p>
 
                 <br>
 
                 <p>
+
                     El certificado forma parte de la identidad
                     de la obra y permite conservar su procedencia
                     para el futuro.
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1095,9 +1189,9 @@
 </section>
 
 
-<!-- ================================
+<!-- =====================================================
      CONTACTO
-================================= -->
+====================================================== -->
 
 <section class="contact" id="contacto">
 
@@ -1108,16 +1202,21 @@
         </div>
 
         <h2>
+
             ¿Encontraste<br>
             tu obra?
+
         </h2>
 
         <p>
+
             Si alguna de mis obras ha despertado algo en ti,
             puedes escribirme directamente. Estaré encantado
             de conversar contigo sobre la pieza, su historia,
             disponibilidad y envío.
+
         </p>
+
 
         <a
             class="btn"
@@ -1132,9 +1231,9 @@
 </section>
 
 
-<!-- ================================
+<!-- =====================================================
      FOOTER
-================================= -->
+====================================================== -->
 
 <footer>
 
@@ -1146,15 +1245,15 @@
 
         <div class="social">
 
-            <a href="#" target="_blank">
+            <a href="#">
                 Instagram
             </a>
 
-            <a href="#" target="_blank">
+            <a href="#">
                 Facebook
             </a>
 
-            <a href="#" target="_blank">
+            <a href="#">
                 TikTok
             </a>
 
@@ -1165,15 +1264,15 @@
 </footer>
 
 
-<!-- ================================
+<!-- =====================================================
      WHATSAPP FLOTANTE
-================================= -->
+====================================================== -->
 
 <a
     class="whatsapp"
     href="https://wa.me/51999999999?text=Hola%20Miguel,%20estoy%20interesado%20en%20una%20de%20tus%20obras."
     target="_blank"
-    aria-label="Contactar por WhatsApp"
+    aria-label="WhatsApp"
 >
     ☎
 </a>
