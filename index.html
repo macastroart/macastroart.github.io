@@ -1,21 +1,21 @@
 ```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Miguel Ángel Castro | Arte Original</title>
+<title>Miguel Ángel Castro | Arte Original</title>
 
-    <meta name="description" content="Miguel Ángel Castro — Artista plástico. Obras originales inspiradas en la memoria, identidad y universo andino.">
-    <meta name="author" content="Miguel Ángel Castro">
+<meta name="description" content="Miguel Ángel Castro — Artista plástico. Obras originales inspiradas en la memoria, identidad y universo andino.">
+<meta name="author" content="Miguel Ángel Castro">
 
-    <!-- TIPOGRAFÍAS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 
 <style>
@@ -38,7 +38,7 @@ body {
     background: #f7f4ed;
     color: #292720;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 img {
@@ -78,34 +78,44 @@ header {
 
 .logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 29px;
+    font-size: 30px;
     letter-spacing: 3px;
-    font-weight: 500;
+    font-weight: 600;
+    color: #25231f;
 }
 
 .logo span {
     display: block;
     font-family: 'Montserrat', sans-serif;
-    font-size: 8px;
+    font-size: 9px;
+    font-weight: 500;
     letter-spacing: 4px;
     margin-top: 2px;
-    opacity: .55;
+    color: #5d584e;
 }
+
+
+/* =========================================================
+   MENÚ
+========================================================= */
 
 nav {
     display: flex;
-    gap: 32px;
-    font-size: 10px;
-    letter-spacing: 2px;
+    gap: 34px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
 nav a {
-    opacity: .65;
+    color: #403d36;
+    opacity: .9;
     transition: .3s;
 }
 
 nav a:hover {
+    color: #8b7550;
     opacity: 1;
 }
 
@@ -139,32 +149,35 @@ nav a:hover {
 }
 
 .eyebrow {
-    font-size: 9px;
+    font-size: 10px;
+    font-weight: 500;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: #81745b;
+    color: #75684f;
     margin-bottom: 25px;
 }
 
 .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(65px, 9vw, 125px);
-    font-weight: 400;
+    font-weight: 500;
     line-height: .82;
     max-width: 850px;
+    color: #292720;
 }
 
 .hero h1 em {
     font-style: italic;
-    color: #8b7550;
+    color: #80683f;
 }
 
 .hero-description {
     max-width: 520px;
     margin-top: 35px;
     line-height: 1.9;
-    font-size: 13px;
-    color: #625e55;
+    font-size: 14px;
+    color: #4f4b43;
+    font-weight: 400;
 }
 
 .hero-buttons {
@@ -174,11 +187,17 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
 .btn {
     display: inline-block;
     padding: 15px 28px;
-    border: 1px solid #7b725f;
-    font-size: 9px;
+    border: 1px solid #706854;
+    font-size: 10px;
+    font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: .3s;
@@ -187,12 +206,13 @@ nav a:hover {
 .btn:hover {
     background: #292720;
     color: white;
+    border-color: #292720;
 }
 
 .btn-gold {
-    background: #a58c5e;
+    background: #9b8151;
     color: white;
-    border-color: #a58c5e;
+    border-color: #9b8151;
 }
 
 .btn-gold:hover {
@@ -203,7 +223,6 @@ nav a:hover {
 
 /* =========================================================
    OBRA DESTACADA
-   MARFIL
 ========================================================= */
 
 .featured {
@@ -233,30 +252,43 @@ nav a:hover {
     transform: scale(1.025);
 }
 
+
+/* =========================================================
+   ETIQUETAS
+========================================================= */
+
 .section-label {
-    font-size: 9px;
+    font-size: 10px;
+    font-weight: 500;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #927b55;
+    color: #806b48;
     margin-bottom: 20px;
 }
+
+
+/* =========================================================
+   INFORMACIÓN OBRA
+========================================================= */
 
 .featured-info h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(55px, 6vw, 82px);
-    font-weight: 400;
+    font-weight: 500;
     line-height: .88;
     margin-bottom: 30px;
+    color: #292720;
 }
 
 .featured-info h2 em {
-    color: #8b7550;
+    color: #80683f;
 }
 
 .featured-info > p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.9;
-    color: #625e55;
+    color: #4f4b43;
+    font-weight: 400;
 }
 
 .details {
@@ -269,32 +301,35 @@ nav a:hover {
 .detail-row {
     display: flex;
     justify-content: space-between;
-    padding: 7px 0;
-    font-size: 11px;
+    padding: 8px 0;
+    font-size: 12px;
+    color: #403d36;
 }
 
 .detail-row span:first-child {
-    color: #898274;
+    color: #746e62;
 }
 
 .price {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
+    font-size: 44px;
+    font-weight: 500;
+    color: #292720;
     margin-bottom: 25px;
 }
 
 .availability {
-    font-size: 8px;
+    font-size: 9px;
+    font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #81704e;
+    color: #5d765f;
     margin-bottom: 12px;
 }
 
 
 /* =========================================================
    GALERÍA
-   BLANCO
 ========================================================= */
 
 .gallery {
@@ -309,8 +344,9 @@ nav a:hover {
 .section-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(48px, 6vw, 75px);
-    font-weight: 400;
+    font-weight: 500;
     line-height: .95;
+    color: #292720;
 }
 
 .gallery-grid {
@@ -344,21 +380,22 @@ nav a:hover {
 
 .art-info h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 29px;
+    font-weight: 500;
+    color: #302d27;
 }
 
 .art-info p {
-    font-size: 8px;
-    letter-spacing: 2px;
-    color: #8a857c;
-    margin-top: 6px;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    color: #68635a;
+    margin-top: 7px;
 }
 
 
 /* =========================================================
    MANIFIESTO
-   AZUL GRISÁCEO
 ========================================================= */
 
 .statement {
@@ -377,7 +414,7 @@ nav a:hover {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(42px, 5vw, 70px);
     line-height: 1.04;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .statement blockquote em {
@@ -388,15 +425,14 @@ nav a:hover {
 .statement p {
     max-width: 620px;
     margin: 35px auto 0;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.9;
-    color: #56615f;
+    color: #4c5654;
 }
 
 
 /* =========================================================
    SOBRE EL ARTISTA
-   ARENA CLARA
 ========================================================= */
 
 .about {
@@ -411,10 +447,6 @@ nav a:hover {
     align-items: center;
 }
 
-.about-image {
-    position: relative;
-}
-
 .about-image img {
     aspect-ratio: 4 / 5;
     object-fit: cover;
@@ -424,22 +456,23 @@ nav a:hover {
 .about-text h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(55px, 6vw, 82px);
-    font-weight: 400;
+    font-weight: 500;
     line-height: .88;
     margin-bottom: 30px;
+    color: #292720;
 }
 
 .about-text p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 2;
-    color: #655f55;
+    color: #504b43;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
 
 /* =========================================================
    CERTIFICADO
-   TERRACOTA MUY SUAVE
 ========================================================= */
 
 .certificate {
@@ -459,20 +492,20 @@ nav a:hover {
 .certificate-box h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 55px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: .95;
+    color: #302c28;
 }
 
 .certificate-box p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.9;
-    color: #655c57;
+    color: #5b534d;
 }
 
 
 /* =========================================================
    CONTACTO
-   OCRE CLARO
 ========================================================= */
 
 .contact {
@@ -489,14 +522,14 @@ nav a:hover {
 .contact h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(58px, 8vw, 100px);
-    font-weight: 400;
+    font-weight: 500;
     line-height: .84;
 }
 
 .contact p {
     max-width: 520px;
     margin: 30px auto;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.9;
     color: #554d3c;
 }
@@ -513,7 +546,6 @@ nav a:hover {
 
 /* =========================================================
    FOOTER
-   BLANCO ROTO
 ========================================================= */
 
 footer {
@@ -529,18 +561,20 @@ footer {
 }
 
 footer p {
-    font-size: 8px;
+    font-size: 9px;
+    font-weight: 500;
     letter-spacing: 2px;
-    color: #8b877e;
+    color: #6d685f;
     text-transform: uppercase;
 }
 
 .social {
     display: flex;
     gap: 25px;
-    font-size: 9px;
+    font-size: 10px;
+    font-weight: 500;
     letter-spacing: 1px;
-    color: #777269;
+    color: #5f5a51;
 }
 
 
@@ -580,7 +614,7 @@ footer p {
 
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
 @media (max-width: 850px) {
@@ -614,8 +648,13 @@ footer p {
     .certificate-box {
         padding: 45px;
     }
+
 }
 
+
+/* =========================================================
+   CELULAR
+========================================================= */
 
 @media (max-width: 550px) {
 
@@ -629,12 +668,25 @@ footer p {
         padding: 80px 0;
     }
 
+    header {
+        padding: 22px 0;
+    }
+
     .logo {
         font-size: 24px;
     }
 
+    .logo span {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
     .hero h1 {
         font-size: 65px;
+    }
+
+    .hero-description {
+        font-size: 13px;
     }
 
     .gallery-grid {
@@ -653,9 +705,17 @@ footer p {
         margin-top: 20px;
     }
 
+    .whatsapp {
+        width: 52px;
+        height: 52px;
+        right: 18px;
+        bottom: 18px;
+    }
+
 }
 
 </style>
+
 </head>
 
 
@@ -663,618 +723,637 @@ footer p {
 
 
 <!-- =====================================================
-     CABECERA
-====================================================== -->
+     HEADER
+===================================================== -->
 
 <header>
 
-    <div class="container nav">
+<div class="container nav">
 
-        <a href="#" class="logo">
+<a href="#" class="logo">
 
-            MIGUEL ÁNGEL CASTRO
+MIGUEL ÁNGEL CASTRO
 
-            <span>
-                ARTISTA PLÁSTICO
-            </span>
+<span>ARTISTA PLÁSTICO</span>
 
-        </a>
+</a>
 
-        <nav>
 
-            <a href="#obra">
-                Obra destacada
-            </a>
+<nav>
 
-            <a href="#galeria">
-                Galería
-            </a>
+<a href="#obra">Obra destacada</a>
 
-            <a href="#artista">
-                Artista
-            </a>
+<a href="#galeria">Galería</a>
 
-            <a href="#contacto">
-                Contacto
-            </a>
+<a href="#artista">Artista</a>
 
-        </nav>
+<a href="#contacto">Contacto</a>
 
-    </div>
+</nav>
+
+</div>
 
 </header>
 
 
+
 <!-- =====================================================
-     PORTADA
-====================================================== -->
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="eyebrow">
-            Arte original · Perú
-        </div>
+<div class="eyebrow">
+Arte original · Perú
+</div>
 
-        <h1>
 
-            El arte<br>
+<h1>
 
-            <em>que permanece.</em>
+El arte<br>
 
-        </h1>
+<em>que permanece.</em>
 
-        <p class="hero-description">
+</h1>
 
-            Obras originales donde la realidad y la abstracción
-            se encuentran para explorar la memoria, la identidad
-            y la fuerza de los Andes.
 
-        </p>
+<p class="hero-description">
 
-        <div class="hero-buttons">
+Obras originales donde la realidad y la abstracción
+se encuentran para explorar la memoria, la identidad
+y la fuerza de los Andes.
 
-            <a href="#obra" class="btn btn-gold">
-                Descubrir la obra
-            </a>
+</p>
 
-            <a href="#galeria" class="btn">
-                Ver galería
-            </a>
 
-        </div>
+<div class="hero-buttons">
 
-    </div>
+<a href="#obra" class="btn btn-gold">
+Descubrir la obra
+</a>
+
+<a href="#galeria" class="btn">
+Ver galería
+</a>
+
+</div>
+
+</div>
 
 </section>
+
 
 
 <!-- =====================================================
      OBRA DESTACADA
-====================================================== -->
+===================================================== -->
 
 <section class="featured" id="obra">
 
-    <div class="container featured-grid">
+<div class="container featured-grid">
 
 
-        <div class="featured-image">
+<div class="featured-image">
 
-            <!-- FOTO PROVISIONAL -->
+<img
+src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a5?auto=format&fit=crop&w=1000&q=90"
+alt="El sueño del cóndor"
+>
 
-            <img
-                src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a5?auto=format&fit=crop&w=1000&q=90"
-                alt="El sueño del cóndor"
-            >
-
-        </div>
+</div>
 
 
-        <div class="featured-info">
+<div class="featured-info">
 
-            <div class="section-label">
-                Obra destacada · 01
-            </div>
-
-            <h2>
-
-                El sueño<br>
-
-                <em>del cóndor</em>
-
-            </h2>
-
-            <p>
-
-                Una obra inspirada en la fuerza simbólica
-                del cóndor y su vínculo con el mundo andino.
-                Una mirada hacia aquello que permanece en la
-                memoria y hacia aquello que todavía está
-                por despertar.
-
-            </p>
+<div class="section-label">
+Obra destacada · 01
+</div>
 
 
-            <div class="details">
+<h2>
 
-                <div class="detail-row">
-                    <span>Técnica</span>
-                    <span>Acrílico sobre lienzo</span>
-                </div>
+El sueño<br>
 
-                <div class="detail-row">
-                    <span>Dimensiones</span>
-                    <span>100 × 125 cm</span>
-                </div>
+<em>del cóndor</em>
 
-                <div class="detail-row">
-                    <span>Tipo</span>
-                    <span>Obra original</span>
-                </div>
-
-                <div class="detail-row">
-                    <span>Certificado</span>
-                    <span>Incluido</span>
-                </div>
-
-            </div>
+</h2>
 
 
-            <div class="availability">
-                ● Disponible
-            </div>
+<p>
 
-            <div class="price">
-                S/ 3,000
-            </div>
+Una obra inspirada en la fuerza simbólica
+del cóndor y su vínculo con el mundo andino.
+Una mirada hacia aquello que permanece en la
+memoria y hacia aquello que todavía está
+por despertar.
+
+</p>
 
 
-            <a
-                class="btn btn-gold"
-                href="https://wa.me/51999999999?text=Hola%20Miguel,%20estoy%20interesado%20en%20la%20obra%20El%20sue%C3%B1o%20del%20c%C3%B3ndor."
-                target="_blank"
-            >
-                Adquirir esta obra
-            </a>
+<div class="details">
 
-        </div>
+<div class="detail-row">
+<span>Técnica</span>
+<span>Acrílico sobre lienzo</span>
+</div>
 
-    </div>
+<div class="detail-row">
+<span>Dimensiones</span>
+<span>100 × 125 cm</span>
+</div>
+
+<div class="detail-row">
+<span>Tipo</span>
+<span>Obra original</span>
+</div>
+
+<div class="detail-row">
+<span>Certificado</span>
+<span>Incluido</span>
+</div>
+
+</div>
+
+
+<div class="availability">
+● Disponible
+</div>
+
+
+<div class="price">
+S/ 3,000
+</div>
+
+
+<a
+class="btn btn-gold"
+href="https://wa.me/51999999999?text=Hola%20Miguel,%20estoy%20interesado%20en%20la%20obra%20El%20sue%C3%B1o%20del%20c%C3%B3ndor."
+target="_blank"
+>
+Adquirir esta obra
+</a>
+
+</div>
+
+</div>
 
 </section>
+
 
 
 <!-- =====================================================
      GALERÍA
-====================================================== -->
+===================================================== -->
 
 <section class="gallery" id="galeria">
 
-    <div class="container">
+<div class="container">
 
-        <div class="gallery-heading">
+<div class="gallery-heading">
 
-            <div class="section-label">
-                Colección
-            </div>
+<div class="section-label">
+Colección
+</div>
 
-            <h2 class="section-title">
-                Obras seleccionadas
-            </h2>
+<h2 class="section-title">
+Obras seleccionadas
+</h2>
 
-        </div>
+</div>
 
 
-        <div class="gallery-grid">
+<div class="gallery-grid">
 
 
-            <article class="art-card">
+<article class="art-card">
 
-                <div class="art-image">
+<div class="art-image">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=900&q=85"
-                        alt="Tejiendo la memoria"
-                    >
+<img
+src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=900&q=85"
+alt="Tejiendo la memoria"
+>
 
-                </div>
+</div>
 
-                <div class="art-info">
+<div class="art-info">
 
-                    <h3>
-                        Tejiendo la memoria
-                    </h3>
+<h3>
+Tejiendo la memoria
+</h3>
 
-                    <p>
-                        OBRA ORIGINAL · VENDIDA
-                    </p>
+<p>
+OBRA ORIGINAL · VENDIDA
+</p>
 
-                </div>
+</div>
 
-            </article>
+</article>
 
 
-            <article class="art-card">
 
-                <div class="art-image">
+<article class="art-card">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=900&q=85"
-                        alt="El sueño del cóndor"
-                    >
+<div class="art-image">
 
-                </div>
+<img
+src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=900&q=85"
+alt="El sueño del cóndor"
+>
 
-                <div class="art-info">
+</div>
 
-                    <h3>
-                        El sueño del cóndor
-                    </h3>
+<div class="art-info">
 
-                    <p>
-                        ACRÍLICO SOBRE LIENZO · 100 × 125 CM
-                    </p>
+<h3>
+El sueño del cóndor
+</h3>
 
-                </div>
+<p>
+ACRÍLICO SOBRE LIENZO · 100 × 125 CM
+</p>
 
-            </article>
+</div>
 
+</article>
 
-            <article class="art-card">
 
-                <div class="art-image">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=900&q=85"
-                        alt="Memoria de los Andes"
-                    >
+<article class="art-card">
 
-                </div>
+<div class="art-image">
 
-                <div class="art-info">
+<img
+src="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=900&q=85"
+alt="Memoria de los Andes"
+>
 
-                    <h3>
-                        Memoria de los Andes
-                    </h3>
+</div>
 
-                    <p>
-                        COLECCIÓN · PRÓXIMAMENTE
-                    </p>
+<div class="art-info">
 
-                </div>
+<h3>
+Memoria de los Andes
+</h3>
 
-            </article>
+<p>
+COLECCIÓN · PRÓXIMAMENTE
+</p>
 
+</div>
 
-            <article class="art-card">
+</article>
 
-                <div class="art-image">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?auto=format&fit=crop&w=900&q=85"
-                        alt="Guardianes"
-                    >
 
-                </div>
+<article class="art-card">
 
-                <div class="art-info">
+<div class="art-image">
 
-                    <h3>
-                        Guardianes
-                    </h3>
+<img
+src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?auto=format&fit=crop&w=900&q=85"
+alt="Guardianes"
+>
 
-                    <p>
-                        COLECCIÓN · PRÓXIMAMENTE
-                    </p>
+</div>
 
-                </div>
+<div class="art-info">
 
-            </article>
+<h3>
+Guardianes
+</h3>
 
+<p>
+COLECCIÓN · PRÓXIMAMENTE
+</p>
 
-            <article class="art-card">
+</div>
 
-                <div class="art-image">
+</article>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a5?auto=format&fit=crop&w=900&q=85"
-                        alt="La llamada"
-                    >
 
-                </div>
 
-                <div class="art-info">
+<article class="art-card">
 
-                    <h3>
-                        La llamada
-                    </h3>
+<div class="art-image">
 
-                    <p>
-                        COLECCIÓN · PRÓXIMAMENTE
-                    </p>
+<img
+src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a5?auto=format&fit=crop&w=900&q=85"
+alt="La llamada"
+>
 
-                </div>
+</div>
 
-            </article>
+<div class="art-info">
 
+<h3>
+La llamada
+</h3>
 
-            <article class="art-card">
+<p>
+COLECCIÓN · PRÓXIMAMENTE
+</p>
 
-                <div class="art-image">
+</div>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=900&q=85"
-                        alt="Origen"
-                    >
+</article>
 
-                </div>
 
-                <div class="art-info">
 
-                    <h3>
-                        Origen
-                    </h3>
+<article class="art-card">
 
-                    <p>
-                        COLECCIÓN · PRÓXIMAMENTE
-                    </p>
+<div class="art-image">
 
-                </div>
+<img
+src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=900&q=85"
+alt="Origen"
+>
 
-            </article>
+</div>
 
+<div class="art-info">
 
-        </div>
+<h3>
+Origen
+</h3>
 
-    </div>
+<p>
+COLECCIÓN · PRÓXIMAMENTE
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
 
 </section>
+
 
 
 <!-- =====================================================
      MANIFIESTO
-====================================================== -->
+===================================================== -->
 
 <section class="statement">
 
-    <div class="container statement-inner">
+<div class="container statement-inner">
 
-        <div class="section-label">
-            Una mirada
-        </div>
+<div class="section-label">
+Una mirada
+</div>
 
-        <blockquote>
 
-            “No pinto solamente lo que veo.
-            <em>Pinto aquello que permanece</em>
-            cuando lo visible desaparece.”
+<blockquote>
 
-        </blockquote>
+“No pinto solamente lo que veo.
+<em>Pinto aquello que permanece</em>
+cuando lo visible desaparece.”
 
-        <p>
+</blockquote>
 
-            Mi pintura nace del encuentro entre la figuración
-            y la abstracción. Busco que cada obra conserve algo
-            reconocible y, al mismo tiempo, permita al espectador
-            completar aquello que no está dicho.
 
-        </p>
+<p>
 
-    </div>
+Mi pintura nace del encuentro entre la figuración
+y la abstracción. Busco que cada obra conserve algo
+reconocible y, al mismo tiempo, permita al espectador
+completar aquello que no está dicho.
+
+</p>
+
+</div>
 
 </section>
+
 
 
 <!-- =====================================================
      ARTISTA
-====================================================== -->
+===================================================== -->
 
 <section class="about" id="artista">
 
-    <div class="container about-grid">
+<div class="container about-grid">
 
 
-        <div class="about-image">
+<div class="about-image">
 
-            <!-- FOTO PROVISIONAL -->
+<img
+src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=85"
+alt="Miguel Ángel Castro - Artista"
+>
 
-            <img
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=85"
-                alt="Artista"
-            >
-
-        </div>
+</div>
 
 
-        <div class="about-text">
+<div class="about-text">
 
-            <div class="section-label">
-                El artista
-            </div>
+<div class="section-label">
+El artista
+</div>
 
-            <h2>
 
-                Miguel Ángel<br>
-                Castro
+<h2>
 
-            </h2>
+Miguel Ángel<br>
+Castro
 
-            <p>
+</h2>
 
-                Artista plástico peruano cuya obra explora
-                la memoria, la identidad y el imaginario
-                de los Andes a través de una combinación
-                de realismo, abstracción y una pincelada
-                expresiva.
 
-            </p>
+<p>
 
-            <p>
+Artista plástico peruano cuya obra explora
+la memoria, la identidad y el imaginario
+de los Andes a través de una combinación
+de realismo, abstracción y una pincelada
+expresiva.
 
-                Cada pintura busca construir una experiencia:
-                no solamente representar una escena, sino
-                crear una atmósfera capaz de permanecer en
-                la memoria de quien la contempla.
+</p>
 
-            </p>
 
-            <a href="#contacto" class="btn">
-                Contactar
-            </a>
+<p>
 
-        </div>
+Cada pintura busca construir una experiencia:
+no solamente representar una escena, sino
+crear una atmósfera capaz de permanecer en
+la memoria de quien la contempla.
 
-    </div>
+</p>
+
+
+<a href="#contacto" class="btn">
+Contactar
+</a>
+
+</div>
+
+</div>
 
 </section>
+
 
 
 <!-- =====================================================
      CERTIFICADO
-====================================================== -->
+===================================================== -->
 
 <section class="certificate">
 
-    <div class="container">
+<div class="container">
 
-        <div class="certificate-box">
-
-
-            <div>
-
-                <div class="section-label">
-                    Autenticidad
-                </div>
-
-                <h2>
-
-                    Una obra original
-                    merece una historia
-                    que la acompañe.
-
-                </h2>
-
-            </div>
+<div class="certificate-box">
 
 
-            <div>
+<div>
 
-                <p>
-
-                    Cada obra original adquirida incluye
-                    su Certificado de Autenticidad, con la
-                    información correspondiente a la pieza,
-                    técnica, dimensiones y autoría.
-
-                </p>
-
-                <br>
-
-                <p>
-
-                    El certificado forma parte de la identidad
-                    de la obra y permite conservar su procedencia
-                    para el futuro.
-
-                </p>
-
-            </div>
+<div class="section-label">
+Autenticidad
+</div>
 
 
-        </div>
+<h2>
 
-    </div>
+Una obra original
+merece una historia
+que la acompañe.
+
+</h2>
+
+</div>
+
+
+<div>
+
+<p>
+
+Cada obra original adquirida incluye
+su Certificado de Autenticidad, con la
+información correspondiente a la pieza,
+técnica, dimensiones y autoría.
+
+</p>
+
+
+<br>
+
+
+<p>
+
+El certificado forma parte de la identidad
+de la obra y permite conservar su procedencia
+para el futuro.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
+
 
 
 <!-- =====================================================
      CONTACTO
-====================================================== -->
+===================================================== -->
 
 <section class="contact" id="contacto">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-label">
-            Adquisiciones
-        </div>
-
-        <h2>
-
-            ¿Encontraste<br>
-            tu obra?
-
-        </h2>
-
-        <p>
-
-            Si alguna de mis obras ha despertado algo en ti,
-            puedes escribirme directamente. Estaré encantado
-            de conversar contigo sobre la pieza, su historia,
-            disponibilidad y envío.
-
-        </p>
+<div class="section-label">
+Adquisiciones
+</div>
 
 
-        <a
-            class="btn"
-            href="https://wa.me/51999999999?text=Hola%20Miguel,%20quiero%20informaci%C3%B3n%20sobre%20una%20de%20tus%20obras."
-            target="_blank"
-        >
-            Contactar por WhatsApp
-        </a>
+<h2>
 
-    </div>
+¿Encontraste<br>
+tu obra?
+
+</h2>
+
+
+<p>
+
+Si alguna de mis obras ha despertado algo en ti,
+puedes escribirme directamente. Estaré encantado
+de conversar contigo sobre la pieza, su historia,
+disponibilidad y envío.
+
+</p>
+
+
+<a
+class="btn"
+href="https://wa.me/51999999999?text=Hola%20Miguel,%20quiero%20informaci%C3%B3n%20sobre%20una%20de%20tus%20obras."
+target="_blank"
+>
+Contactar por WhatsApp
+</a>
+
+</div>
 
 </section>
 
 
+
 <!-- =====================================================
      FOOTER
-====================================================== -->
+===================================================== -->
 
 <footer>
 
-    <div class="container footer-inner">
+<div class="container footer-inner">
 
-        <p>
-            © 2026 Miguel Ángel Castro · Arte Original
-        </p>
+<p>
+© 2026 Miguel Ángel Castro · Arte Original
+</p>
 
-        <div class="social">
 
-            <a href="#">
-                Instagram
-            </a>
+<div class="social">
 
-            <a href="#">
-                Facebook
-            </a>
+<a href="#">
+Instagram
+</a>
 
-            <a href="#">
-                TikTok
-            </a>
+<a href="#">
+Facebook
+</a>
 
-        </div>
+<a href="#">
+TikTok
+</a>
 
-    </div>
+</div>
+
+</div>
 
 </footer>
 
 
+
 <!-- =====================================================
-     WHATSAPP FLOTANTE
-====================================================== -->
+     WHATSAPP
+===================================================== -->
 
 <a
-    class="whatsapp"
-    href="https://wa.me/51999999999?text=Hola%20Miguel,%20estoy%20interesado%20en%20una%20de%20tus%20obras."
-    target="_blank"
-    aria-label="WhatsApp"
+class="whatsapp"
+href="https://wa.me/51999999999?text=Hola%20Miguel,%20estoy%20interesado%20en%20una%20de%20tus%20obras."
+target="_blank"
+aria-label="WhatsApp"
 >
-    ☎
+☎
 </a>
 
 
